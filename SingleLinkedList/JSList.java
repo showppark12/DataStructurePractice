@@ -1,8 +1,6 @@
 //권오흠 교수님 강의를 들으면서 만든 단방향 링크드리스트 
 package jongminlist;
 
-import section1.Node;
-
 public class JSList<T> {
 	private Node<T> head; //head 에는 무조건 노드가 들어올테니까 당연히 Node<T>타입으로 설정해야지
 	private int size; //리스트에 몇개가 들어오는지는 알고 있으면 좋으니까 size도 설정
@@ -28,7 +26,7 @@ public class JSList<T> {
 		}
 	}
 	
-	private Node<T> getNode(int index) { //인덱스를 받아서 그자리에 있는 노드를 리턴해주는 메소드
+	public Node<T> getNode(int index) { //인덱스를 받아서 그자리에 있는 노드를 리턴해주는 메소드
 		//먼저 리스트를 순회하면서 찾는 노드를 넣어줄 통을만들어야대 
 		//일단 그전에 이상한 index가들어왔는지 검사
 		if(index <0 || index >= size) //영보다작고 size와 똑같아도 안대 왜냐면 사이드가 3이면 index는 2까지 있을거거든
@@ -96,7 +94,7 @@ public class JSList<T> {
 		return tmp;
 	}
 
-	private T removeFirst() { //맨앞에 노드 삭제하기
+	publicT removeFirst() { //맨앞에 노드 삭제하기
 		T tmp = head.data;//삭제할데이타를 따로 변수에저장
 		head=head.next;//그리고 헤드에다가 원래있던 헤드의 넥스트를 저장시켜주면 삭제완료
 		size--;//사이즈 줄이고

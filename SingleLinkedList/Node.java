@@ -2,7 +2,7 @@
 package jongminlist;
 
 public class Node<T> {
-	private T data;
+	publicT data;
 	public Node<T> next;
 	
 	public Node(T item) {
